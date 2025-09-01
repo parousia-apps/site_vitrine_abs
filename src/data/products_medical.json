@@ -1,0 +1,91 @@
+[
+  {
+    "id": "oxymetre-001",
+    "slug": "oxymetre-de-pouls",
+    "name": "Oxymètre de pouls",
+    "description": "Mesure SpO2 et rythme cardiaque.",
+    "price": 15000,
+    "currency": "XOF",
+    "category": "Matériel de diagnostic",
+    "inStock": true,
+    "badge": "Promo",
+    "image": "/images/medical/oxymetre.jpg"
+  },
+  {
+    "id": "tensiometre-002",
+    "slug": "tensiometre-bras-automatique",
+    "name": "Tensiomètre bras",
+    "description": "Mesure automatique avec mémoire.",
+    "price": 24000,
+    "currency": "XOF",
+    "category": "Matériel de diagnostic",
+    "inStock": true,
+    "image": "/images/medical/centrifugeuse.jpg"
+  },
+  {
+    "id": "gants-003",
+    "slug": "gants-nitrile",
+    "name": "Gants nitrile (boîte 100)",
+    "description": "Sans latex, non poudrés, usage médical.",
+    "price": null,
+    "currency": "XOF",
+    "category": "Consommables médicaux",
+    "inStock": true,
+    "image": "/images/medical/oxymetre.jpg"
+  },
+  {
+    "id": "tensiometre-002",
+    "slug": "tensiometre-bras-automatique",
+    "name": "Tensiomètre bras",
+    "description": "Mesure automatique avec mémoire.",
+    "price": 24000,
+    "currency": "XOF",
+    "category": "Matériel de diagnostic",
+    "inStock": true,
+    "image": "/images/medical/centrifugeuse.jpg"
+  },
+  {
+    "id": "tensiometre-002",
+    "slug": "tensiometre-bras-automatique",
+    "name": "Tensiomètre bras",
+    "description": "Mesure automatique avec mémoire.",
+    "price": 24000,
+    "currency": "XOF",
+    "category": "Matériel de diagnostic",
+    "inStock": true,
+    "image": "/images/medical/centrifugeuse.jpg"
+  },
+  {
+    "id": "tensiometre-002",
+    "slug": "tensiometre-bras-automatique",
+    "name": "Tensiomètre bras",
+    "description": "Mesure automatique avec mémoire.",
+    "price": 24000,
+    "currency": "XOF",
+    "category": "Matériel de diagnostic",
+    "inStock": true,
+    "image": "/images/medical/centrifugeuse.jpg"
+  },
+  {
+    "id": "tensiometre-002",
+    "slug": "tensiometre-bras-automatique",
+    "name": "Tensiomètre bras",
+    "description": "Mesure automatique avec mémoire.",
+    "price": 24000,
+    "currency": "XOF",
+    "category": "Matériel de diagnostic",
+    "inStock": true,
+    "image": "/images/medical/centrifugeuse.jpg"
+  },
+  {
+    "id": "tensiometre-002",
+    "slug": "tensiometre-bras-automatique",
+    "name": "Tensiomètre bras",
+    "description": "Mesure automatique avec mémoire.",
+    "price": 24000,
+    "currency": "XOF",
+    "category": "Matériel de diagnostic",
+    "inStock": true,
+    "image": "/images/medical/centrifugeuse.jpg"
+  }
+]

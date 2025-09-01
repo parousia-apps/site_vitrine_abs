@@ -1,0 +1,50 @@
+[
+  {
+    "id": "site-vitrine",
+    "title": "Site vitrine professionnel",
+    "summary": "Un site internet simple et élégant qui présente l’entreprise, ses services, ses coordonnées et une carte Google Maps. Idéal pour les petites entreprises, cabinets, artisans, restaurants.",
+    "fromPrice": 150000,
+    "currency": "XOF",
+    "deliverables": ["Design responsive (adapté PC & mobile)", "3 à 5 pages (Accueil, Services, À propos, Contact)", "Formulaire de contact", "Optimisation pour Google"]
+  },
+  {
+    "id": "ecommerce",
+    "title": "Boutique en ligne (E-commerce)",
+    "summary": "Une boutique en ligne pour vendre ses produits partout au Bénin (et à l’international si voulu) avec paiement mobile money ou virement bancaire.",
+    "fromPrice": 300000,
+    "currency": "XOF",
+    "deliverables": ["Catalogue produits (jusqu’à 100 articles)", "Système de panier et paiement en ligne", "Gestion des stocks et des commandes", "Formation pour gérer la boutique"]
+  },
+  {
+    "id": "mobile-app",
+    "title": "Application mobile simple",
+    "summary": "Application multi-plateformes pour gérer un besoin précis (réservation, catalogue produit, suivi clients, etc.).",
+    "fromPrice": 350000,
+    "currency": "XOF",
+    "deliverables": ["Design et développement complet", "Publication sur plateformes", "Interface simple et intuitive", "..."]
+  },
+  {
+    "id": "desktop-app",
+    "title": "Logiciel de gestion d’entreprise",
+    "summary": "Solution informatique sur mesure pour gérer les ventes, stocks, clients, facturation.",
+    "fromPrice": 400000,
+    "currency": "XOF",
+    "deliverables": ["Interface adaptée au secteur (commerce, hôtel, clinique…)", "Gestion multi-utilisateurs", "Sauvegarde et sécurité des données", "..."]
+  },
+  {
+    "id": "maintenance",
+    "title": "Maintenance & Sécurité informatique",
+    "summary": "Abonnement pour garantir le bon fonctionnement des systèmes et protéger contre les virus/piratages.",
+    "fromPrice": 50000,
+    "currency": "XOF",
+    "deliverables": ["Mises à jour régulières", "Sauvegardes", "Antivirus", "Assistance à distance ou sur site"]
+  },
+  {
+    "id": "cloud",
+    "title": "Services Cloud & Hébergement",
+    "summary": "Solutions pour héberger un site web, stocker ses données en ligne et utiliser des messageries professionnelles.",
+    "fromPrice": 80000,
+    "currency": "XOF",
+    "deliverables": ["Hébergement sécurisé", "Nom de domaine personnalisé", "Sauvegarde régulière", "..."]
+  }
+]
