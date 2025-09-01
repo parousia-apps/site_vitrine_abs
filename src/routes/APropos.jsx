@@ -6,7 +6,7 @@ export default function APropos() {
     return (
         <>
             <Seo
-                title="À propos"
+                title="À propos "
                 description="Entreprise fondée par Barthélémy Adigbonon : informatique-bureautique, solutions digitales, marchés ministériels (immatriculation), puis matériel médical. Le pôle numérique est aujourd'hui renforcé par sa fille."
             />
 
