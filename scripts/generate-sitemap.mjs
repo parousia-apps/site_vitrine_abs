@@ -1,38 +1,39 @@
-import fs from "fs";
-import path from "path";
-import products from "../src/data/products_medical.json" assert { type: "json" };
+import { readFileSync, writeFileSync, existsSync, mkdirSync } from "node:fs";
+import { resolve, join } from "node:path";
 
-// Utilise la variable d'env en prod, sinon fallback sur ton vercel.app
 const SITE_URL = process.env.SITE_URL || "https://absdistributionsarl.vercel.app";
 
-// Routes statiques (pas de fragments # dans un sitemap)
-const staticPaths = [
-    "/", "/medical", "/numerique", "/a-propos", "/contact", "/mentions-legales"
-];
+// charge les produits sans import assertions
+let products = [];
+try {
+    const raw = readFileSync(resolve("src/data/products_medical.json"), "utf8");
+    products = JSON.parse(raw);
+} catch (_) { products = []; }
 
-// Routes produits
-const productPaths = products
-    .filter(p => p.slug)
-    .map(p => `/medical/produits/${p.slug}`);
+const staticPaths = ["/", "/medical", "/numerique", "/a-propos", "/contact", "/mentions-legales"];
+const productPaths = products.filter(p => p?.slug).map(p => `/medical/produits/${encodeURIComponent(p.slug)}`);
 
-const allPaths = [...new Set([...staticPaths, ...productPaths])];
+const all = Array.from(new Set([...staticPaths, ...productPaths]));
+const lastmod = new Date().toISOString().split("T")[0]; // YYYY-MM-DD
 
-const lastmod = new Date().toISOString();
-
-const urls = allPaths.map(p => `
-  <url>
-    <loc>${SITE_URL}${p}</loc>
-    <lastmod>${lastmod}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>${p === "/" ? "1.0" : p.startsWith("/medical/produits/") ? "0.8" : "0.6"}</priority>
-  </url>`).join("");
+const urls = all.map(p => {
+    const loc = `${SITE_URL}${p}`;
+    const priority = p === "/" ? "1.0" : (p.startsWith("/medical/produits/") ? "0.8" : "0.6");
+    return `<url>
+  <loc>${loc}</loc>
+  <lastmod>${lastmod}</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>${priority}</priority>
+</url>`;
+}).join("\n");
 
 const xml = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${urls}
-</urlset>`;
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${urls}
+</urlset>
+`;
 
-const outDir = path.resolve("public");
-if (!fs.existsSync(outDir)) fs.mkdirSync(outDir, { recursive: true });
-fs.writeFileSync(path.join(outDir, "sitemap.xml"), xml, "utf8");
-
-console.log(`✅ sitemap.xml généré avec ${allPaths.length} URL(s) vers ${SITE_URL}`);
+const outDir = resolve("public");
+if (!existsSync(outDir)) mkdirSync(outDir, { recursive: true });
+writeFileSync(join(outDir, "sitemap.xml"), xml, "utf8");
+console.log(`✅ sitemap.xml généré (${all.length} URL) -> ${SITE_URL}`);
