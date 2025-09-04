@@ -1,20 +1,17 @@
+// scripts/generate-sitemap.mjs
 import { readFileSync, writeFileSync, existsSync, mkdirSync } from "node:fs";
 import { resolve, join } from "node:path";
 
 const SITE_URL = process.env.SITE_URL || "https://absdistributionsarl.vercel.app";
 
-// charge les produits sans import assertions
 let products = [];
-try {
-    const raw = readFileSync(resolve("src/data/products_medical.json"), "utf8");
-    products = JSON.parse(raw);
-} catch (_) { products = []; }
+try { products = JSON.parse(readFileSync(resolve("src/data/products_medical.json"), "utf8")); } catch {}
 
 const staticPaths = ["/", "/medical", "/numerique", "/a-propos", "/contact", "/mentions-legales"];
 const productPaths = products.filter(p => p?.slug).map(p => `/medical/produits/${encodeURIComponent(p.slug)}`);
 
 const all = Array.from(new Set([...staticPaths, ...productPaths]));
-const lastmod = new Date().toISOString().split("T")[0]; // YYYY-MM-DD
+const lastmod = new Date().toISOString().split("T")[0];
 
 const urls = all.map(p => {
     const loc = `${SITE_URL}${p}`;
@@ -27,13 +24,9 @@ const urls = all.map(p => {
 </url>`;
 }).join("\n");
 
-const xml = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${urls}
-</urlset>
-`;
+const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>\n`;
 
 const outDir = resolve("public");
 if (!existsSync(outDir)) mkdirSync(outDir, { recursive: true });
 writeFileSync(join(outDir, "sitemap.xml"), xml, "utf8");
-console.log(`✅ sitemap.xml généré (${all.length} URL) -> ${SITE_URL}`);
+console.log(`✅ sitemap.xml généré (${all.length} URL)`);
