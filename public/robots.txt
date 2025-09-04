@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-
-Sitemap: https://sitevitrineabs.vercel.app/sitemap.xml
+Sitemap: https://absdistributionsarl.vercel.app/sitemap.xml
