@@ -1,10 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    <url><loc>https://sitevitrineabs.vercel.app/</loc></url>
-    <url><loc>https://sitevitrineabs.vercel.app/medical</loc></url>
-    <url><loc>https://sitevitrineabs.vercel.app/numerique</loc></url>
-    <url><loc>https://sitevitrineabs.vercel.app/a-propos</loc></url>
-    <url><loc>https://sitevitrineabs.vercel.app/contact</loc></url>
-
-
+<url>
+  <loc>https://absdistributionsarl.vercel.app/</loc>
+  <lastmod>2025-09-04</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>1.0</priority>
+</url>
+<url>
+  <loc>https://absdistributionsarl.vercel.app/medical</loc>
+  <lastmod>2025-09-04</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>https://absdistributionsarl.vercel.app/numerique</loc>
+  <lastmod>2025-09-04</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>https://absdistributionsarl.vercel.app/a-propos</loc>
+  <lastmod>2025-09-04</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>https://absdistributionsarl.vercel.app/contact</loc>
+  <lastmod>2025-09-04</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>https://absdistributionsarl.vercel.app/mentions-legales</loc>
+  <lastmod>2025-09-04</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.6</priority>
+</url>
+<url>
+  <loc>https://absdistributionsarl.vercel.app/medical/produits/oxymetre-de-pouls</loc>
+  <lastmod>2025-09-04</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://absdistributionsarl.vercel.app/medical/produits/tensiometre-bras-automatique</loc>
+  <lastmod>2025-09-04</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://absdistributionsarl.vercel.app/medical/produits/gants-nitrile</loc>
+  <lastmod>2025-09-04</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+</url>
 </urlset>
